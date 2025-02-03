@@ -41,6 +41,7 @@ public class ClassYobidashi01 {
 		//非static内部クラスのインスタンス生成
 		ClassYobidashi01.Sub2 s2 = (new ClassYobidashi01()).new Sub2();
 		s2.print05();
+		
 	}
 	
 	class Sub2{//内部クラス staticやprivateも使える
