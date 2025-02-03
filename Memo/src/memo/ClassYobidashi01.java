@@ -37,6 +37,18 @@ public class ClassYobidashi01 {
 		s.a04 += 10;//別のクラス（外部クラス）のインスタンスフィールドの書き換え
 		s.print03();//別のクラス（外部クラス）のクラスメソッド(静的メソッド)
 		s.print04();//別のクラス（外部クラス）のインスタンスメソッド
+	
+		//非static内部クラスのインスタンス生成
+		ClassYobidashi01.Sub2 s2 = (new ClassYobidashi01()).new Sub2();
+		s2.print05();
+	}
+	
+	class Sub2{//内部クラス staticやprivateも使える
+		int a05 = 5;//非staticなのでインスタンスフィールド
+		public void print05(){
+			System.out.printf("print05内部クラスのクラスメソッド%d%n",a05);
+			
+		}
 	}
 
 }
