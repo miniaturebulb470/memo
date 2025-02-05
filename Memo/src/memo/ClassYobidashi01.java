@@ -7,7 +7,7 @@ public class ClassYobidashi01 {
 	
 	public static void print01() {//staticがあるのでクラスメソッド(静的メソッド)
 		System.out.printf("print01同じクラスのクラスメソッド%d%n",a01);
-	}
+	}//静的メンバ(クラスメンバ)しか使えない
 	
 	public void print02() {//staticがないのでインスタンスメソッド
 		System.out.printf("print02同じクラスのインスタンスメソッド%d%n",this.a02);
@@ -27,6 +27,8 @@ public class ClassYobidashi01 {
 		c.a02 += 10;//同じクラスのインスタンスフィールドの書き換え
 		c.print01();//同じクラスのクラスメソッド(静的メソッド)
 		c.print02();//同じクラスのインスタンスメソッド
+		
+		new ClassYobidashi01().print02();//同じクラスのインスタンスメソッド,一回きり
 		
 		
 		Sub.a03 += 10;//別のクラス（外部クラス）のクラス変数（静的フィールド）の書き換え
